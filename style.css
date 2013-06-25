@@ -1,0 +1,117 @@
+/*
+Theme Name: Applied Product Solutions
+Theme URI: http://nicreate.com
+Author: Nic Johnson
+Author URI: http://nicreate.com
+Description: Theme for APS-HVAC.com
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+body, .serif {
+    font-family: 'Inika', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+}
+a {
+    color: #007c92;
+}
+a:hover, a:focus {
+    color: #00555e;
+}
+header, .sans {
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h2 small {
+    display: block;
+    color: #bbb;
+}
+.stacked h2 {
+    line-height: 28px;
+    font-size: 26px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    /*min-height: 74px;*/
+}
+.stacked ul {
+    margin-bottom: 2em;
+}
+.stacked li a {
+    background: #fff url("img/more.png") right 50% no-repeat;
+    background: #fff url("img/more.svg") right 50% no-repeat;
+    border-bottom: 1px solid #eee;
+    border-color: #eee;
+    padding: .75em 1em .75em 0;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.5s ease, padding 0.3s ease, border-left 0.3s ease;
+}
+.stacked li a:hover {
+    background-color: #eee;
+    padding-left: 6px;
+    border-left: 3px solid #ddd;
+}
+.product-taxonomy li {
+    display: inline-block;
+    margin-right: 1.5em;
+    color: #aaa;
+    font-size: 13px;
+}
+.wpba-attachment-list li {
+    display: list-item;
+}
+#searchform .search-query {
+    -moz-transition: width 0.1s ease-out;
+    -ms-transition: width 0.1s ease-out;
+    -webkit-transition: width 0.1s ease-out;
+    transition: width 0.1s ease-out;
+}
+
+.single h2 {
+    /*margin-bottom: 0;*/
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 979px) { /* tablet */
+  
+}
+
+@media (max-width: 767px) { /* mobile landscape */
+  
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+@media (max-width: 480px) {
+  
+}
+
+@media (max-width: 979px) {
+  
+}
+
+@media (min-width: 980px) {
+    body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+  
+}
