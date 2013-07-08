@@ -39,7 +39,7 @@
                                         <?php 
                                             $args = array(
                                                           'title_li' => '',
-                                                          'taxonomy' => 'categories',
+                                                          // 'taxonomy' => 'categories',
                                                           'depth' => 1
                                                           );
                                             wp_list_categories( $args ); 

@@ -14,13 +14,13 @@ get_header(); ?>
 
     <div class="row">
         <div class="span4 stacked">
-            <h2><small>Browse by</small> Product Category</h2>
+            <h2><small>Browse by</small> Category</h2>
             <ul class="unstyled stacked">
             <?php 
 
             $args = array(
                           'title_li' => '',
-                          'taxonomy' => 'categories',
+                          // 'taxonomy' => 'categories',
                           'depth'    => '1'
                           );
             wp_list_categories( $args ); 

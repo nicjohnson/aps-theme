@@ -11,7 +11,7 @@
         <li>Model Number: <?php echo get_post_meta( get_the_ID(), 'model-number', true ); ?></li>
         <li><?php echo get_the_term_list( $post->ID, 'applications', 'Applications: ', ', ', '' ); ?></li>
         <li><?php echo get_the_term_list( $post->ID, 'manufacturers', 'Manufacturers: ', ', ', '' ); ?></li>
-        <li><?php echo get_the_term_list( $post->ID, 'categories', 'Categories: ', ', ', '' ); ?></li>
+        <li><?php echo get_the_term_list( $post->ID, 'category', 'Categories: ', ', ', '' ); ?></li>
       </ul>
       <h3>Description</h3>
       <?php echo get_post_meta( get_the_ID(), 'description', true ); ?>
