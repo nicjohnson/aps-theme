@@ -23,9 +23,11 @@
           <?php echo get_post_meta( get_the_ID(), 'features', true ); ?>
         </div>
         <div class="span5">
+          <?php if (function_exists('wpba_attachments_exist')) { ?>
           <?php if (wpba_attachments_exist()) { ?>
             <h3>Attachments</h3>
             <?php echo wpba_attachment_list(array(show_icon => false, float_class => '', open_new_window => true));  ?>
+          <?php } ?>
           <?php } ?>
         </div>
       </div>
