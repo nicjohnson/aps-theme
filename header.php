@@ -72,6 +72,10 @@
                                         ?>
                                     </ul>
                                 </li>
+                                <?php 
+                                    $args = array('depth' => 0, 'title_li' => '' );
+                                    wp_list_pages( $args ); 
+                                ?>
                             </ul>
                             <?php get_search_form(); ?>
                         </div><!--/.nav-collapse -->
