@@ -11,7 +11,13 @@
         <li>Model Number: <?php echo get_post_meta( get_the_ID(), 'model-number', true ); ?></li>
         <li><?php echo get_the_term_list( $post->ID, 'applications', 'Applications: ', ', ', '' ); ?></li>
         <li><?php echo get_the_term_list( $post->ID, 'manufacturers', 'Manufacturers: ', ', ', '' ); ?></li>
-        <li><?php echo get_the_term_list( $post->ID, 'category', 'Categories: ', ', ', '' ); ?></li>
+        <!-- <li><?php echo get_the_term_list( $post->ID, 'category', 'Categories: ', ', ', '' ); ?></li> -->
+        <li>Categories: <?php
+       $cat_Id = get_the_category($post->ID);
+       $categories = get_category_parents( $cat_Id[0], true, ' > ' );
+       $title = get_the_title();
+       echo substr($categories, 0, strlen($categories) -3 );
+    ?></li>
       </ul>
       <h3>Description</h3>
       <?php echo get_post_meta( get_the_ID(), 'description', true ); ?>

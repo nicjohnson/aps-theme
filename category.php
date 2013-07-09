@@ -1,16 +1,36 @@
 <?php get_header(); ?>
 
-<pre><code><?php print_r($wp_query) ?></code></pre>
+<div class="row single">
+  <div class="span3 hidden-phone">
+    <ul class="unstyled">
+      <?php 
 
+            $args = array(
+                          'title_li' => '',
+                          // 'taxonomy' => 'categories',
+                          // 'depth'    => '1'
+                          );
+            wp_list_categories( $args ); 
+
+            ?>
+    </ul>
+  </div>
+  <div class="span9">
   <?php if ( have_posts() ) : ?>
-      <ul class="unstyled stacked">
+    <h3><?php 
+      $catid = $wp_query->query_vars['cat'];
+      $cat_family = array_reverse(explode(',', get_category_parents($catid, true, ',')));
+      echo ($cat_family[2]) ? $cat_family[2].' > ' : '';
+      echo $cat_family[1]; ?></h3>
+    <ul class="unstyled stacked">
     <?php while ( have_posts() ) : the_post(); ?>
-        <li><a class="" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+      <li><a class="" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     <?php endwhile; ?>
-      </ul>
-    </div>
+    </ul>
   <?php else : ?>
     <p>nope</p>
   <?php endif; ?>
+  </div>
+</div>
 
 <?php get_footer(); ?>

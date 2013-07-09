@@ -3,8 +3,18 @@
 add_action( 'init', 'create_post_type' );
 add_action( 'init', 'manufacturers_taxonomy' );
 add_action( 'init', 'applications_taxonomy' );
-add_action( 'init', 'categories_taxonomy' );
+// add_action( 'init', 'categories_taxonomy' );
 add_action( 'after_switch_theme', 'my_rewrite_flush' );
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'products'
+    ));
+    return $query;
+  }
+}
 
 function my_rewrite_flush() {
   flush_rewrite_rules();
@@ -30,8 +40,9 @@ function create_post_type() {
         'parent' => 'Parent Product',
       ),
       'taxonomies' => array('category', 'manufacturers', 'applications'),
-      'supports' => array('title','editor','revisions','author'),
-      'query_var' => 'true',
+      'supports' => array('title', 'editor', 'revisions', 'author'),
+      'query_var' => true,
+      'has_archive' => true,
       'public' => true,
       'menu_position' => 2,
       'rewrite' => array('slug' => 'products')
