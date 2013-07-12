@@ -2,25 +2,19 @@
 
 <div class="row single">
   <div class="span3 hidden-phone">
-    <ul class="unstyled">
+    <ul class="unstyled taxonomy-list sans">
       <?php 
-
-            $args = array(
-                          'title_li' => '',
-                          // 'taxonomy' => 'categories',
-                          // 'depth'    => '1'
-                          );
-            wp_list_categories( $args ); 
-
-            ?>
+        $args = array('title_li' => '');
+        wp_list_categories( $args ); 
+      ?>
     </ul>
   </div>
   <div class="span9">
   <?php if ( have_posts() ) : ?>
     <h3><?php 
       $catid = $wp_query->query_vars['cat'];
-      $cat_family = array_reverse(explode(',', get_category_parents($catid, true, ',')));
-      echo ($cat_family[2]) ? $cat_family[2].' > ' : '';
+      $cat_family = array_reverse(explode(',', get_category_parents($catid, false, ',')));
+      echo ($cat_family[2]) ? $cat_family[2].' <span class="separator">></span> ' : '';
       echo $cat_family[1]; ?></h3>
     <ul class="unstyled stacked">
     <?php while ( have_posts() ) : the_post(); ?>

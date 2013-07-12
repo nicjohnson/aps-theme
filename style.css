@@ -32,10 +32,19 @@ header, .sans {
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 h2 small {
     display: block;
+    color: #bbb;
+}
+img.pull-left {
+    margin: 0 1em 1em 0;
+}
+img.pull-right {
+    margin: 0 0 1em 1em;
+}
+.separator {
     color: #bbb;
 }
 .stacked h2 {
@@ -79,11 +88,25 @@ h2 small {
     -webkit-transition: width 0.1s ease-out;
     transition: width 0.1s ease-out;
 }
-
-.single h2 {
-    /*margin-bottom: 0;*/
+.taxonomy-list {
+    margin-top: 20px;
 }
-
+.taxonomy-list li {
+    border-top: 1px solid #eee;
+    padding: 0.5em 0;
+}
+.taxonomy-list li:first-child {
+    border-top: none;
+}
+.taxonomy-list li li {
+    border: none;
+    padding: 6px 0 0;
+}
+.description {
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin: 2em 0;
+}
 
 
 
