@@ -53,7 +53,6 @@
           </div>
         </div>
       </div>
-      <?php the_content(); ?>
     <?php endwhile; ?>
     </div>
   </div>

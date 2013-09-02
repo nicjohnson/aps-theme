@@ -52,10 +52,10 @@
         <div class="item-content">
           <h5>
             <a class="" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            by <?php echo get_the_term_list( $post->ID, 'manufacturers', '', ', ', '' ); ?>
-            <small><?php if(get_field('model_number')){ ?>(Model #: <?php the_field('model_number'); ?>)<?php } ?></small>
+            <small>by</small> <?php echo get_the_term_list( $post->ID, 'manufacturers', '', ', ', '' ); ?>
+            <small><?php if(get_field('model_number')){ ?> – Model: <?php the_field('model_number'); ?><?php } ?></small>
           </h5>
-          <p><small><?php the_field('description'); ?></small></p>
+          <p><small><?php the_field('summary'); ?></small></p>
         </div>
       </li>
     <?php endwhile; ?>
