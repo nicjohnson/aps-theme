@@ -2,10 +2,10 @@
 
   <?php while ( have_posts() ) : the_post(); ?>
   <div class="row single">
-    <div class="span2 hidden-phone">
+    <div class="col-md-2 hidden-phone">
       <h4>Sidebar?</h4>
     </div>
-    <div class="span10">
+    <div class="col-md-10">
       <h2><?php the_title(); ?></h2>
       <?php the_content(); ?>
     <?php endwhile; ?>

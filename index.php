@@ -4,61 +4,71 @@ get_header(); ?>
 
     
 
+<div class="hero">
+    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/hero1.jpg">
+</div>
+
+<div class="row">
+  <div class="col-md-4 col-sm-4">
+    <h2><small>Browse by</small> Category</h2>
+    <ul class="category-items list-unstyled">
+<?php
+$taxonomy = 'category';
+foreach (get_terms($taxonomy) as $cat) {
+  if (function_exists('z_taxonomy_image_url') && $cat->parent == '0') {
+    $catImage = z_taxonomy_image_url($cat->term_id);
+?>      
+        <li> 
+          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background: left 50% url(<?php echo z_taxonomy_image_url($cat->term_id); ?>) no-repeat; background-size: 60px;"<?php } ?>>
+          <?php echo $cat->name; ?>
+          </a>
+        </li>
+<?php }} ?>
+    </ul>
+  </div>
 
 
-<!--     <div class="hero-unit">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-    </div> -->
 
-    <div class="row">
-        <div class="span4 stacked">
-            <h2><small>Browse by</small> Category</h2>
-            <ul class="unstyled stacked">
-            <?php 
+  <div class="col-md-4 col-sm-4">
+    <h2><small>Browse by</small> Manufacturer</h2>
+    <ul class="category-items list-unstyled">
+<?php
+    $taxonomy = 'manufacturers';
+    foreach (get_terms($taxonomy) as $cat) {
+      if (function_exists('z_taxonomy_image_url') && $cat->parent == '0') {
+        $catImage = z_taxonomy_image_url($cat->term_id);
+?>
+        <li> 
+          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background: left 50% url(<?php echo z_taxonomy_image_url($cat->term_id); ?>) no-repeat; background-size: 60px;"<?php } ?>>
+          <?php echo $cat->name; ?>
+          </a>
+        </li>
 
-            $args = array(
-                          'title_li' => '',
-                          // 'taxonomy' => 'categories',
-                          'depth'    => '1'
-                          );
-            wp_list_categories( $args ); 
+<?php }} ?>
+    </ul>
+  </div>
 
-            ?>
-            </ul>
-        </div>
-        <div class="span4 stacked">
-          <h2><small>Browse by</small> Application</h2>
-          <ul class="unstyled stacked">
-          <?php 
 
-          $args = array(
-                        'title_li'   => '',
-                        'taxonomy'   => 'applications',
-                          'depth'    => '1'
-                        );
-          wp_list_categories( $args ); 
 
-          ?>
-          </ul>
-       </div>
-        <div class="span4 stacked">
-            <h2><small>Browse by</small> Manufacturer</h2>
-            <ul class="unstyled stacked">
-            <?php 
+  <div class="col-md-4 col-sm-4">
+    <h2><small>Browse by</small> Application</h2>
+    <ul class="category-items list-unstyled">
+<?php
+    $taxonomy = 'applications';
+    foreach (get_terms($taxonomy) as $cat) {
+      if (function_exists('z_taxonomy_image_url') && $cat->parent == '0') {
+        $catImage = z_taxonomy_image_url($cat->term_id);
+?>
+        <li> 
+          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background: left 50% url(<?php echo z_taxonomy_image_url($cat->term_id); ?>) no-repeat; background-size: 60px;"<?php } ?>>
+          <?php echo $cat->name; ?>
+          </a>
+        </li>
 
-            $args = array(
-                          'title_li' => '',
-                          'taxonomy' => 'manufacturers',
-                          'depth'    => '1'
-                          );
-            wp_list_categories( $args ); 
-
-            ?>
-            </ul>
-        </div>
-    </div>
+<?php }} ?>
+      </ul>
+  </div>
+</div>
 
 
     

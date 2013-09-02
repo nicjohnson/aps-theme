@@ -19,12 +19,16 @@ body, .serif {
     font-family: 'Inika', sans-serif;
     font-size: 15px;
     line-height: 22px;
+    /*background: #eee;*/
 }
 a {
     color: #007c92;
 }
 a:hover, a:focus {
     color: #00555e;
+}
+header {
+    margin-bottom: 1em;
 }
 header, .sans {
     font-family: 'Montserrat', sans-serif;
@@ -44,8 +48,73 @@ img.pull-left {
 img.pull-right {
     margin: 0 0 1em 1em;
 }
+
+.masthead {
+    padding: 1em 0;
+}
+.color-bar {
+    background: #007c92;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .nav>li>a {
+    color: #fff;
+}
+.navbar-inverse {
+    border: none;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    background-color: #007c92;
+}
+
+.hero {
+    margin-top: -1em;
+    margin-bottom: 3em;
+}
+
 .separator {
     color: #bbb;
+}
+
+/*.category-items {
+    margin: 0;
+    padding: 0;
+}
+.category-items li:first-child {
+}
+.category-items li {
+    margin: 0 16px 16px 0;
+    display: inline-block;
+    width: 212px;
+    vertical-align: top;
+    padding: 0;
+    text-align: center;
+    box-shadow: 1px 3px 0 0 rgba(0, 0, 0, 0.05);
+}*/
+.category-items li a {
+    display: block;
+    padding: 1em 0 1em 76px;
+    border-bottom: 1px solid #eee;
+}
+.detail-list li {
+    padding: 1em 0;
+    border-top: 1px solid #eee;
+}
+.detail-list li img {
+    width: 80px;
+}
+.detail-list li a {
+    /*display: block;*/
+}
+.item-content {
+    padding-left: 96px;
+}
+.item-content h5 {
+    margin-top: 0;
+}
+.item-content small {
+    color: #999;
 }
 .stacked h2 {
     line-height: 28px;
@@ -82,14 +151,12 @@ img.pull-right {
 .wpba-attachment-list li {
     display: list-item;
 }
-#searchform .search-query {
-    -moz-transition: width 0.1s ease-out;
-    -ms-transition: width 0.1s ease-out;
-    -webkit-transition: width 0.1s ease-out;
-    transition: width 0.1s ease-out;
-}
 .taxonomy-list {
     margin-top: 20px;
+    color: #ccc;
+}
+.taxonomy-list a {
+    color: #007c92;
 }
 .taxonomy-list li {
     border-top: 1px solid #eee;
@@ -116,6 +183,9 @@ img.pull-right {
 }
 
 @media (max-width: 767px) { /* mobile landscape */
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }
   
 }
 
@@ -132,9 +202,9 @@ img.pull-right {
 }
 
 @media (min-width: 980px) {
-    body {
+/*    body {
         padding-top: 60px;
         padding-bottom: 40px;
     }
-  
+*/  
 }

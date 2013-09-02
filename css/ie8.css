@@ -1,0 +1,15 @@
+body, .serif {
+    font-family: sans-serif;
+}
+header, .sans {
+    font-family: sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: sans-serif;
+}
+.category-items li {
+}
+.category-items li a {
+    padding-left: 0;
+    background-image: none !important;
+}
