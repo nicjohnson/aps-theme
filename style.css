@@ -70,7 +70,7 @@ img.pull-right {
 
 .hero {
     margin-top: -1em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 
 .separator {
@@ -96,6 +96,8 @@ img.pull-right {
     display: block;
     padding: 1em 0 1em 76px;
     border-bottom: 1px solid #eee;
+    background: transparent url("img/missing-image.png") left 50% no-repeat;
+    background-size: 60px;
 }
 .detail-list li {
     padding: 1em 0;

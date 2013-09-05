@@ -5,7 +5,7 @@ get_header(); ?>
     
 
 <div class="hero">
-    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/hero1.jpg">
+    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/hero.jpg">
 </div>
 
 <div class="row">
@@ -19,7 +19,7 @@ foreach (get_terms($taxonomy) as $cat) {
     $catImage = z_taxonomy_image_url($cat->term_id);
 ?>      
         <li> 
-          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background: left 50% url(<?php echo z_taxonomy_image_url($cat->term_id); ?>) no-repeat; background-size: 60px;"<?php } ?>>
+          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background-image: url(<?php echo z_taxonomy_image_url($cat->term_id); ?>);"<?php } ?>>
           <?php echo $cat->name; ?>
           </a>
         </li>
@@ -39,7 +39,7 @@ foreach (get_terms($taxonomy) as $cat) {
         $catImage = z_taxonomy_image_url($cat->term_id);
 ?>
         <li> 
-          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background: left 50% url(<?php echo z_taxonomy_image_url($cat->term_id); ?>) no-repeat; background-size: 60px;"<?php } ?>>
+          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background-image: url(<?php echo z_taxonomy_image_url($cat->term_id); ?>);"<?php } ?>>
           <?php echo $cat->name; ?>
           </a>
         </li>
@@ -60,7 +60,7 @@ foreach (get_terms($taxonomy) as $cat) {
         $catImage = z_taxonomy_image_url($cat->term_id);
 ?>
         <li> 
-          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background: left 50% url(<?php echo z_taxonomy_image_url($cat->term_id); ?>) no-repeat; background-size: 60px;"<?php } ?>>
+          <a href="<?php echo get_term_link($cat->slug, $taxonomy); ?>" title="<?php echo $cat->description; ?>"<?php if (!empty($catImage)) { ?> style="background-image: url(<?php echo z_taxonomy_image_url($cat->term_id); ?>);"<?php } ?>>
           <?php echo $cat->name; ?>
           </a>
         </li>
